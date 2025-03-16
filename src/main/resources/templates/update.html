@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Update</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body
+	style="display: flex; flex-direction: column; align-items: center;">
+	<h1>UPOLO</h1>
+
+	<form th:action="@{update}" method="post">
+		old password : <input type="text" name="oldPass"
+			placeholder="enter old password" maxlength="10" required="required">
+		<p style="color: red" th:text="${oerror}"></p>
+		<br> new password : <input type="password" name="newPass"
+			placeholder="enter old password" maxlength="10" minlength="3"
+			id="password"> <input type="checkbox" id="show"
+			class="showhide">
+		<p style="color: red" th:text="${nerror}"></p>
+		<br> <input type="submit" value="update"
+			style="color: white; background-color: #2382ff; width: 150px; height: 50px; border-radius: 15px; border: none; cursor: pointer;">
+
+		<a href="/profile" class="cancel">cancel</a>
+	</form>
+
+	<script>
+		let pass = document.getElementById("password");
+		let box = document.getElementById("show");
+
+		box.onclick = function() {
+			if (pass.type == "password") {
+				pass.type = "text";
+			} else {
+				pass.type = "password";
+			}
+		}
+
+		//.............
+		function preventBack() {
+			window.history.forward();
+		}
+
+		setTimeout("preventBack()", 0);
+
+		window.onunload = function() {
+			null
+		};
+	</script>
+</body>
+
+</html>

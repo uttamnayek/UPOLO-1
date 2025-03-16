@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+}
+
+body {
+    background: linear-gradient(to right, rgb(255, 94, 0), rgb(255, 255, 0));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+form {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    padding: 0px 50px 20px;
+    background: #0000001b;
+
+    input {
+        width: 250px;
+        height: 30px;
+        border-radius: 15px;
+        text-align: center;
+        margin-top: 25px;
+        border: none;
+    }
+
+    p {
+        font-size: larger;
+        color: rgb(29, 3, 81);
+    }
+}
+
+input:hover {
+    background: #dd4646;
+    outline: none;
+    inset-inline: unset;
+}
+
+input:focus {
+    border: none;
+}
+
+.calculator {
+    width: 90px;
+    border: none;
+}
+
+.calculator:hover {
+    background: #baedb3;
+    cursor: pointer;
+}
+
+
+.percentage,
+.sgpa {
+    border: none;
+    width: 250px;
+    height: 30px;
+    border-radius: 15px;
+    margin-top: 25px;
+    color: rgb(6, 172, 6);
+    background-color: rgba(255, 255, 255, 0.426);
+    align-content: center;
+}
+
+.showhide {
+    width: 15px;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+.reg,
+.login,
+.freetrial {
+    margin-top: 50px;
+    color: white;
+    background-color: #2382ff;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    align-content: center;
+}
+
+.freetrial {
+    flex-direction: row;
+    margin-top: 50px;
+    background-color: rgba(19, 212, 19, 0.822);
+
+}
+
+.freetrial:hover {
+    color: black;
+    background-color: rgb(246, 230, 0);
+    transition: ease-in-out 0.1s;
+
+    a {
+        color: black;
+    }
+}
+
+.reg:hover,
+.login:hover {
+    background-color: #0e652e;
+
+}
+
+.delete-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80px;
+    border: 1px solid black;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.delButton {
+    cursor: pointer;
+}
+
+.index {
+    margin-top: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    /* border: 1px black solid; */
+    border-radius: 15px;
+    /* text-align: center;
+    align-items: center; */
+    background: #4e678a;
+
+    a {
+        color: #fc9b00;
+        padding: 15px;
+        /* text-align: center;
+        align-items: center; */
+    }
+}
+
+.index:hover {
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+
+    a {
+        padding: 15px;
+        border-radius: 15px;
+        color: #28e761;
+        transition: 0.3s ease-in-out;
+    }
+}
+
+#poloforn {
+    background-color: #0e652e;
+
+    #xxx {
+        background-color: #fc9b00;
+        margin-bottom: 30px;
+        cursor: pointer;
+        width: 180px;
+    }
+
+    button {
+        width: 150px;
+        height: 50px;
+        background: #6494d7;
+        border-radius: 15px;
+        border: none;
+        font-size: 15px;
+        color: #fffefe;
+    }
+}
+
+/* ///// */
+div {
+    width: 100%;
+    background-color: green;
+}
+
+div ul li {
+
+    width: 200px;
+
+}
+
+div a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    display: inline-block;
+
+    /* width: 200px; */
+    /* background-color: green; */
+}
+
+ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li:hover {
+    background: #ff8800;
+}
+
+ul li:hover ul {
+    display: block;
+}
+
+ul li ul {
+    position: absolute;
+    width: 200px;
+    display: none;
+}
+
+ul li ul li {
+    background: #e9e62c;
+    display: block;
+}
+
+ul li ul li:hover {
+    background: #ff8800;
+}
+
+ul li ul li a {
+    display: block !important;
+    color: black;
+}
+
+/*cancel botton in update forn*/
+.cancel {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    align-content: center;
+    color: white;
+    background-color: #2382ff;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title th:text="${headline}"></title>
+<link rel="stylesheet" href="css/NewFile.css">
+<link rel="icon" type="image" href="css/logo.png">
+</head>
+
+<body
+	style="display: flex; flex-direction: column; align-items: center;">
+
+
+
+	<h1>UPOLO</h1>
+	<!---------------------------email id & password----------------------->
+	<div th:if="${log}"
+		style="display: flex; flex-direction: column; width: 600px;"
+		class="reglog">
+		<video autoplay muted loop id="bg-video">
+			<source src="css/path-to-your-video.webm" type="video/webm">
+			Your browser does not support the video tag.
+		</video>
+		<b style="color: red"><span th:text="${error}"></span></b>
+
+		<form th:action="@{/login}" th:object="${user}" method="post">
+
+			email* : <input type="email" th:field="*{email}"
+				placeholder="enter your email" required="required"> <br>
+			password* : <input type="password" th:field="*{password}"
+				placeholder="enter your passsword" required="required"
+				maxlength="10" id="password"> <input type="checkbox"
+				id="show"> <br> <a href="/mlogin">try another way</a> <br>
+			<br> <a href="/#">forget password</a> <br> <br> <input
+				type="submit" value="Log in"
+				style="color: white; background-color: #2382ff; width: 150px; height: 50px; border-radius: 15px; border: none; cursor: pointer;">
+		</form>
+		<br> <br> <a href="/">index</a> <br> <br> <a
+			href="/signup">signup</a>
+	</div>
+
+	<!---------------------------username & password----------------------->
+	<div th:if="${mlog}"
+		style="display: flex; flex-direction: column; width: 600px;"
+		class="reglog">
+		<video autoplay muted loop id="bg-video">
+			<source src="css/path-to-your-video.webm" type="video/webm">
+			Your browser does not support the video tag.
+		</video>
+		<b style="color: red"><span th:text="${error}"></span></b>
+
+		<form th:action="@{/mlogin}" th:object="${user}" method="post">
+
+			username* : <input type="text" th:field="*{username}"
+				placeholder="enter your username" required="required"> <br>
+			<br> password* : <input type="password" th:field="*{password}"
+				placeholder="enter your passsword" required="required"
+				maxlength="10" id="password"> <input type="checkbox"
+				id="show"> <br> <br> <a href="/login">try
+				another way</a> <br> <br> <a href="/#">forget password</a> <br>
+			<br> <input type="submit" value="Log in"
+				style="color: white; background-color: #2382ff; width: 150px; height: 50px; border-radius: 15px; border: none; cursor: pointer;">
+		</form>
+		<br> <br> <a href="/">index</a> <br> <br> <a
+			href="/signup">signup</a>
+	</div>
+	<!------------------------------------------------------>
+	<div th:if="${reg}"
+		style="display: flex; flex-direction: column; width: 600px;"
+		class="reglog">
+		<video autoplay muted loop id="bg-video">
+			<source src="css/path-to-your-video.webm" type="video/webm">
+			Your browser does not support the video tag.
+		</video>
+		<b style="color: red"><span th:text="${error}"></span></b>
+
+		<form th:action="@{/signup}" th:object="${user}" method="post">
+
+			name* : <input type="text" th:field="*{name}"
+				placeholder="enter your name" required="required"> <br>
+			<br> username* : <input type="text" th:field="*{username}"
+				placeholder="enter your username" required="required"> <br>
+			<br> email* : <input type="email" th:field="*{email}"
+				placeholder="enter your email" required="required"> <br>
+			<br> password* : <input type="password" th:field="*{password}"
+				placeholder="enter your passsword" required="required"
+				maxlength="10" id="password"> <input type="checkbox"
+				id="show"> <br> <br> <input type="submit"
+				value="registration"
+				style="color: white; background-color: #2382ff; width: 150px; height: 50px; border-radius: 15px; border: none; cursor: pointer;">
+		</form>
+		<br> <br> <a href="/">index</a> <br> <br> <a
+			href="/mlogin">login</a>
+	</div>
+
+	<script type="text/javascript">
+		let pass = document.getElementById("password");
+		let box = document.getElementById("show");
+
+		box.onclick = function() {
+			if (pass.type == "password") {
+				pass.type = "text";
+			} else {
+				pass.type = "password";
+			}
+		}
+
+		window.history.forward();
+		function noBack() {
+			window.history.forward();
+		}
+		setTimeout("noBack()", 0);
+		window.onunload = function() {
+			null
+		};
+
+		window.history.forward();
+		function noBack() {
+			window.history.forward();
+		}
+		setTimeout("noBack()", 0);
+		// Optional: Ensure that the user cannot go back when they refresh the page
+		window.onunload = function() {
+			null
+		};
+
+		window.history.forward();
+		function noBack() {
+			window.history.forward();
+		}
+	</script>
+</body>
+
+</html>

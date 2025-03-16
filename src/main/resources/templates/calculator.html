@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Calculate</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="image" href="css/logo.png">
+</head>
+
+<body>
+	<h1>UPOLO</h1>
+
+	<form th:action="@{/trial}" method="post">
+		<p>Calculate the Percentage & CGPA</p>
+		<input type="" name="odd" placeholder="Enter Odd Semester SGPA" min="0" max="10" step="0.01"
+			required="required"> <input type="number" name="even" placeholder="Enter Even Semester SGPA" min="0"
+			max="10" step="0.01" required="required">
+
+		<!-- <input type="button" class="calculator" value="Calculate"> -->
+
+		<input type="submit" class="calculator" value="calculate">
+
+	</form>
+
+	<div class="sgpa" style="color: black;">
+		CGPA : <span th:text="${cgpa}" style="color: green;"></span>
+	</div>
+
+
+	<div class="percentage" style="color: black;">
+		PERCENTAGE (%) :
+		<span th:text="${per}" style="color: green;"><span th:text="{'%'}"></span>
+	</div>
+
+	<div class="index">
+		<a href="/">index</a>
+	</div>
+</body>
+
+</html>

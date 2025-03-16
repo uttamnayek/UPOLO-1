@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+/* Ensure the video fills the whole screen */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This ensures the video covers the entire body area */
+    z-index: -1;
+    /* Ensures the video stays behind other content */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    /* Keeps the background gradient for the body */
+    color: #fff;
+    min-height: 100vh;
+    justify-content: center;
+    position: relative;
+    /* Allows the video to stay behind content */
+}
+
+
+/* Main heading */
+/* General Styles for h1 */
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    color: #fff;
+    /* White text color */
+    font-size: 3rem;
+    /* Large font size for desktop */
+    letter-spacing: 2px;
+    /* Spacing between letters */
+    text-transform: uppercase;
+    /* Uppercase letters */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    line-height: 1.2;
+    /* Line height for better spacing */
+    transition: all 0.3s ease;
+    /* Smooth transition effect */
+}
+
+/* Hover effect for h1 */
+h1:hover {
+    color: #2575fc;
+    /* Blue color on hover */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    /* Stronger shadow on hover */
+    transform: scale(1.1);
+    /* Slight scale up for hover effect */
+}
+
+/* Responsive Design for h1 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+        /* Slightly smaller font size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        /* Smaller font size for mobile devices */
+        letter-spacing: 1px;
+        /* Reduced letter spacing for smaller screens */
+    }
+}
+
+
+/* Form container styling */
+.reglog {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(246, 217, 239, 0.9);
+    /* Slight transparency */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Form container styling */
+.reglog {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    background-color: rgba(246, 217, 239, 0);
+    /* Full transparency */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: none;
+    /* No shadow to match full transparency */
+}
+
+
+b {
+    font-weight: bold;
+    color: red;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Input and label styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #2575fc;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #2575fc;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #6a11cb;
+}
+
+/* Checkbox and links */
+input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+a {
+    color: #2575fc;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reglog {
+        padding: 25px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .reglog {
+        padding: 20px;
+        width: 90%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    input[type="submit"] {
+        font-size: 18px;
+        padding: 16px;
+    }
+
+    a {
+        font-size: 16px;
+    }
+}
+
+/* To enhance the visual appeal, the background gradient changes */
+@keyframes gradientChange {
+    0% {
+        background: linear-gradient(135deg, #bf7fff, #eafc25);
+    }
+
+    10% {
+        background: linear-gradient(135deg, #8480ff, #fcb425);
+    }
+
+    20% {
+        background: linear-gradient(135deg, #80d5ff, #d525fc);
+    }
+
+    30% {
+        background: linear-gradient(135deg, #7ffd7f, #fc7025);
+    }
+
+    40% {
+        background: linear-gradient(135deg, #f0ff7e, #25fc3e);
+    }
+
+    50% {
+        background: linear-gradient(135deg, #fdaa7d, #8174e6);
+    }
+
+    60% {
+        background: linear-gradient(135deg, #ff8181, #17f143);
+    }
+
+    70% {
+        background: linear-gradient(135deg, #cb117e, #25d8fc);
+    }
+
+    80% {
+        background: linear-gradient(135deg, #6a11cb, #fc9825);
+    }
+
+    90% {
+        background: linear-gradient(135deg, #f6d365, #4e77e8);
+    }
+
+    100% {
+        background: linear-gradient(135deg, #ffffff, #022054);
+    }
+}
+
+body {
+    animation: gradientChange 10s ease infinite;
+}

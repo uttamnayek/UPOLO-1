@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>profile</title>
+	<link rel="stylesheet" href="css/profile.css">
+	<link rel="icon" type="image" href="css/logo.png">
+</head>
+
+<body>
+	<h1>UPOLO</h1>
+	<p style="color: green;">
+		Wellcome : <span th:text="${user.getName()}"></span>
+	</p>
+	<a href="/update">update</a>
+	<br>
+	<br>
+	<a th:href="@{/logout}">logout</a>
+	<br>
+	<br>
+	<a th:href="@{/delete/{id}(id=${user.getId()})}" onclick="myFunction()" class="delete-button">delete account</a>
+	<br>
+	<br>
+	<button confirm("Are you sure about delete the Account ?") th:href="@{/delete/{id}(id=${user.getId()})}">not work-
+		Delete Account</button>
+	<!--onclick="myFunction()"-->
+	<script type="text/javascript">
+		function myFunction() {
+			var result = confirm("Are you sure you want to delete this account?");
+			if (result) {
+				// If user confirms, redirect to the delete URL
+				window.location.href = event.target.href;
+			} else {
+				// If user cancels, prevent the action
+				event.preventDefault();
+			}
+		}
+
+		// Redirect user after logout and prevent back navigation
+		window.history.forward();
+
+		function noBack() {
+			window.history.forward();
+		}
+
+		window.history.forward();
+		function noBack() {
+			window.history.forward();
+		}
+		//...........
+
+		function preventBack() {
+			window.history.forward();
+		}
+
+		setTimeout("preventBack()", 0);
+
+		window.onunload = function () {
+			null
+		};
+
+		/*	function myFunction() {
+				let text = "Are you sure about delete the Account ?";
+
+				if (confirm(text) == true) {
+					text = "You ok!";
+					console.log(text);
+					console.log("you press ok");
+					return true;
+				}
+
+				else {
+					text = "You canceled!";
+					console.log("you press cancle");
+					return false;
+				}
+			}*/
+	</script>
+</body>
+
+</html>

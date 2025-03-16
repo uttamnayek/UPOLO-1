@@ -1,0 +1,86 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    color: green;
+    font-size: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+.delete-button {
+    color: red;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #ff1a1a;
+}
+
+/* Styling for larger screens */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    a, .delete-button, button {
+        font-size: 1.2rem;
+    }
+}
+
+/* Styling for smaller screens */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    a, .delete-button, button {
+        font-size: 1rem;
+        display: block;
+        margin: 10px auto;
+    }
+}

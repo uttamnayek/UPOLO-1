@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>UPOLO</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image" href="css/logo.png">
+    <!-- <link rel="shortcut icon" href="logo.png" type="image"> -->
+</head>
+
+<body style="display: flex;flex-direction: column; align-items: center;">
+    <h1>UPOLO</h1>
+
+    <a class="login" href="/mlogin">login</a>
+
+    <a class="reg" href="/signup">signup</a>
+
+    <div class="freetrial">
+        <a href="/trial">Free try</a>
+    </div>
+    <!-- <button onclick="myFunction()">click here</button> -->
+    <!-- <p id="demo"></p>
+    <p id="wright"></p> -->
+    <br><br>
+    <!-- <form action="/submitt" method="post">
+        <input type="text" name="value">
+        <button type="submit">Submit</button>
+    </form> -->
+    <!-- <form action="/submit" method="post" id="poloforn">
+        <input type="button" name="value" id="xxx" onclick="ourFunction()" value="hi i am polo">
+        <button type="submit">Submit</button>
+    </form> -->
+
+
+
+    <div>
+        <ul>
+
+            <li>
+                <a href="#">Undroped Link 1</a>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Undroped Link 2</a>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Log in / Sign up</a>
+                <ul>
+                    <li><a href="/mlogin">Log in</a></li>
+                    <li><a href="/signup">Sign up</a></li>
+                    <li><a href="#">continue with google</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // function myFunction() {
+        //     let text = "Are you sure ?";
+        //     if (confirm(text) == true) {
+        //         return "ami uttam nayek";
+        //     }
+        //     else {
+        //         return "holo na";
+        //     }
+        // }
+        // document.getElementById("demo").innerHTML = myFunction();
+        // document.getElementById("wright").innerText = myFunction();
+
+        //...................
+
+        fetch('/api/endpoint', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ value: 'Hello from JavaScript!' })
+        })
+            .then(response => response.json())
+            .then(data => console.log(data));
+        //..............
+        function ourFunction() {
+            let text = "do you love me....?";
+            if (confirm(text) == true) {
+                return "ami polo";
+            }
+            else {
+                return "tumi rejo";
+            }
+        }
+        document.getElementById("xxx").innerText.value = ourFunction();
+    </script>
+
+</body>
+
+</html>

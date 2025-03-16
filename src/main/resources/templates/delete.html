@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image" href="css/logo.png">
+</head>
+
+<body>
+    <div class="delete-container">
+        <p>are you sure ?</p>
+
+    </div>
+    <button onclick="myFunction()">Try it</button>
+    <script>
+        function myFunction() {
+            let text = "Press a button!\nEither OK or Cancel.";
+            if (confirm(text) == true) {
+                text = "You pressed OK!";
+                var value = "send it";
+
+            } else {
+                text = "You canceled!";
+                window.confirm('Do you want to exit?');
+                if (window.confirm('Do you really want to leave?')) {
+                    window.open('exit.html', 'Thanks for Visiting!');
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
